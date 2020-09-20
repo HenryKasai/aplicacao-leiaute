@@ -64,6 +64,19 @@ a {
     padding: 20px;
 }
 
+.ilustração {
+    width: 800px;
+    height: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 75px;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
 p {
     text-indent: 30px;
     margin: 0;
@@ -156,3 +169,4 @@ footer {
 #Rodapé:hover {
     color: white;
 }
+
