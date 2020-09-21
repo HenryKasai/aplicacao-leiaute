@@ -1,57 +1,59 @@
-.hg-conteudo {
-    background-color: #733e32b9;
-}
-
-.hg-conteudo > main {
-    background-color: #BF8D7A;
-}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
 body {
     margin: 0 auto;
     max-width: 1440px;
     min-height: 100vh;
-    display: flex;
-    flex-flow: column;
     background-image: url(pexels-fwstudio-172276.jpg);
-    background-size: contain;
-    background-position: left;
+    background-size: cover;
+    font-family: 'Ubuntu';
 }
 
 .hg-conteudo {
     flex: 1;
     display: flex;
+    flex-flow: column;
+    background-color: #733e32b9;
 }
 
 .hg-conteudo > nav {
     order: -1;
+    display: flex;
     align-items: center;
     font-size: 20px;
     text-align: center;
+    margin: 0;
 }
 
 #principal {
-    margin-top: 20px;
     background-color: #A65C41;
     color: #592C28;
-    margin-left: 15px;
-    margin-right: 15px;
-    height: 25px;
-    border-radius: 20px;
 }
 
 .menu {
-    margin-top: 20px;
     background-color: #592C28;
     color: #BF8D7A;
+}
+
+#principal, .menu {
+    margin-top: 20px;
     margin-left: 15px;
     margin-right: 15px;
-    height: 25px;
     border-radius: 20px;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
 }
 
 .menu:hover {
     background-color: #A65C41;
     color: #592C28;
+}
+
+nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
 a {
@@ -62,14 +64,14 @@ a {
 .hg-conteudo > main {
     flex: 1;
     padding: 20px;
+    background-color: #BF8D7A;
 }
 
 .ilustração {
-    width: 800px;
-    height: 600px;
+    max-width: 100%;
+    min-width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 75px;
     border-radius: 10px;
 }
 
@@ -79,7 +81,6 @@ h1 {
 
 p {
     text-indent: 30px;
-    margin: 0;
     line-height: 25px;
     text-align: justify;
 }
@@ -87,17 +88,50 @@ p {
 @media (min-width: 768px) {
     .hg-conteudo {
         flex-flow: row;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .hg-conteudo > aside,
     .hg-conteudo > nav {
         flex: 0 0 200px;
     }
+
+    .hg-conteudo > nav {
+        display: block;
+        float: left;    
+    }
+
+    footer {
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    header {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-bottom: 20px;        
+    }
+
+    #título, #descrição {
+        text-align: justify;
+        margin-left: 40px;
+    }
+
+    #título {
+        margin-top: 20px;
+    }
+
+    aside {
+        flex-flow: column;
+        justify-content: flex-start;
+        height: 500px;
+    }
 }
 
-header {
+#título {
     font-size: 32px;
-    margin-top: 20px;
     color: #BF8D7A;
     text-shadow: #592C28 2px 2px;
     font-weight: 700;
@@ -109,34 +143,24 @@ header {
     color: #BF8D7A;
     text-shadow: #592C28 1px 1px;
     font-weight: 500;
-    padding-bottom: 30px;
 }
 
-header, #descrição {
+header {
     background-color: #733e32b9;
-    padding-left: 30px;
-}
-
-#referência {
-    font-size: 28px;
     text-align: center;
-    margin-bottom: 10px;
-    color: #BF8D7A;
-    text-shadow: #592C28 2px 2px;
 }
 
 #retângulo {
     padding: 20px;
     width: 200px;
     height: 80px;
-    border-radius: 10%;
 }
 
 .quadrado {
     width: 100px;
     height: 100px;
+    margin: 10px;
     padding: 20px;
-    margin-left: 50px;
 }
 
 #etec {
@@ -144,13 +168,13 @@ header, #descrição {
     width: 60px;
     height: 60px;
     border-radius: 10px;
-    margin-left: 70px;
 }
 
-hr {
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid #BF8D7A;
+aside {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    height: 260px;
 }
 
 footer {
@@ -158,7 +182,6 @@ footer {
     padding-bottom: 10px;
     padding-left: 15px ;
     background-color: #733e32b9;
-    margin-bottom: 20px;
 }
 
 #Rodapé {
